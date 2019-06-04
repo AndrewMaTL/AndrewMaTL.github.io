@@ -2,6 +2,7 @@ body {
     background: linear-gradient(318deg, rgba(56, 154, 203, 1) 0%, rgba(202, 75, 138, 1) 100%);
     height: 100vh;
     position: relative;
+    font-family: sans-serif, fantasy, monospace, cursive;
 }
 
 .welcome,
@@ -13,7 +14,7 @@ body {
 }
 
 .welcome {
-    font-size: 46px;
+    font-size: 72px;
     position: absolute;
     top: 30%;
     animation: fadein_content 1s linear;
