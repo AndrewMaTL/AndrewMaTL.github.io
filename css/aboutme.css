@@ -13,8 +13,8 @@
 }
 
 .title,
-span,
-.sub_title {
+.sub_title,
+.self_intro {
     color: #fff;
     text-shadow: 2px 2px #000;
 }
@@ -47,7 +47,8 @@ span,
 }
 
 @media (min-width:768px) {
-    .card-body {
+    .card-body,
+    .program_information {
         display: none;
     }
     .skill_display:hover>.card-body {
@@ -64,11 +65,28 @@ span,
     .card-title {
         line-height: 6em;
     }
+    .college:hover~.program_information {
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        width: 170%;
+        padding: 0px 1em 0px 1em;
+        margin-left: 150px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        animation: fade-in 1s linear;
+    }
 }
 
 @media (min-width:970px) {
     .card-title {
         line-height: 10em;
+    }
+    .college:hover~.program_information {
+        width: 120%;
+        margin-left: 250px;
+        padding: 1em;
     }
 }
 

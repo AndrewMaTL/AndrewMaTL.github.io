@@ -5,6 +5,10 @@ body {
     font-family: sans-serif, fantasy, monospace, cursive;
 }
 
+@-ms-viewport {
+    width: device-width;
+}
+
 .welcome,
 .clickme {
     left: 50%;
