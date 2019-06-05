@@ -46,6 +46,11 @@
     border: unset;
 }
 
+.card-body {
+    padding: 0;
+    text-align: center;
+}
+
 @media (min-width:768px) {
     .card-body,
     .program_information {
