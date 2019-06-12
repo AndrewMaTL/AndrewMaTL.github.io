@@ -44,13 +44,13 @@ $(document).ready(function() {
 
     // display pop up box button
     $(".grid").click(function() {
-        $(".popup_box").css("display", "block");
-        $(".dim_bg").css("display", "block");
         if ($('body').width() > 768) {
             changeCodepen(portolio_no.indexOf($(this).attr('id')));
         } else {
             window.location.href = "https://codepen.io/andrew_Ma/pen/" + portolio_path[portolio_no.indexOf($(this).attr('id'))];
         }
+        $(".popup_box").css("display", "block");
+        $(".dim_bg").css("display", "block");
     });
 
 
