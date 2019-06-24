@@ -1,150 +1,564 @@
-body {
-    height: 100vh;
-    overflow: hidden;
+html {
+    height: 200vh;
+    font-size: 1vw;
+    scroll-behavior: smooth;
 }
 
-.front {
+body {
+    font-family: "Comic Sans MS";
+}
+
+
+/* nav bar part */
+
+.container-wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.nav_bar {
+    height: 100vh;
+    background: #F8F9FA;
+    position: fixed;
+    overflow-y: auto;
+    display: block;
+    text-align: center;
+    font-family: Sans-serif;
+    z-index: 9;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar,
+#sidebarCollapse {
+    transition: all 0.3s;
+    z-index: 9;
+}
+
+#sidebarCollapse {
     display: none;
 }
 
-.back {
-    text-align: center;
+.nav_bar li,
+.nav_bar span {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.card {
-    background: unset;
+.nav_bar span {
+    font-weight: bold;
+    font-size: 2em;
 }
 
-.top_bar {
-    width: 100%;
-    height: 20vh;
-    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+.nav_bar_image {
+    padding: 1vw;
+    margin-top: 2vw;
 }
 
-.icon_card {
-    height: 90px;
-    width: 90px;
+.nav_bar_image img {
     border-radius: 50%;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0.25vw 0.25vw 15px;
 }
 
 .social_icon {
+    height: 100%;
+    max-height: 30px;
     text-align: center;
-    height: 20px;
-    width: 100%;
+    display: block;
+    animation: fade_in 1s linear;
 }
 
-.social_icon>img {
+.social_icon a {
+    height: 100%;
+}
+
+.content {
+    float: right;
+    padding: 15px;
+}
+
+section {
+    margin: 15px;
+}
+
+
+/* section 1 */
+
+#home {
+    min-width: 30vw;
+}
+
+
+/* Style the tab */
+
+.tab {
+    overflow: hidden;
+    background-color: rgba(248, 249, 250, 0.8);
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    min-height: 40vh;
+    border-top: none;
+    transition: all 0.3s;
+    animation: fade_in 0.5s linear;
+    position: relative;
+}
+
+#Who {
+    background: url('/image/section1/BG_1.jpeg');
+    background-size: 100% auto;
+}
+
+div.tabcontent * {
     position: absolute;
 }
 
+#Who h2 {
+    top: 50%;
+    left: 50%;
+}
+
+#Who p {
+    top: 65%;
+    left: 55%;
+    font-size: 1.25em;
+}
+
+div.tabcontent a {
+    top: 80%;
+    left: 80%;
+}
+
+#What h2 {
+    top: 50%;
+    left: 10%;
+}
+
+#What p {
+    top: 65%;
+    left: 15%;
+    font-size: 1.25em;
+}
+
+#What {
+    background: url('/image/section1/BG_2.jpeg');
+    background-size: 100% auto;
+}
+
+.dim {
+    background: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+}
+
+#More {
+    background: url('/image/section1/BG_3.jpeg');
+    background-size: 100% auto;
+}
+
+#More h2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#More .dim {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#More a {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* section2 */
+
+.section_title {
+    white-space: nowrap;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.section_line:nth-child(1) {
+    width: 100%;
+    border-top: 3px solid rgba(0, 0, 0, 0.4);
+    ;
+}
+
+#about p {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.about_card {
+    position: relative;
+}
+
+#skills .card {
+    margin: 3rem auto;
+    width: 10rem;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+}
+
+.box_card {
+    margin: 15px;
+    border-left: 2px solid;
+    max-height: 100px;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+}
+
+.box_card img {
+    padding: 15px;
+}
+
+
+/* section3 */
+
+.hexagon {
+    background: #e84118;
+    height: 4rem;
+    width: 3.5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
+}
+
+.hexagon::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2rem 1rem 2rem 0;
+    border-color: transparent #e84118 transparent transparent;
+    transform: translateX(-100%);
+}
+
+.hexagon::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2rem 0 2rem 1rem;
+    border-color: transparent transparent transparent #e84118;
+    transform: translateX(100%);
+    top: 0%;
+    left: 71%;
+}
+
+.img_display_box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.skill_img {
+    margin: auto;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    height: 65%;
+    transform: translate(-50%, -50%);
+}
+
+#skills .card-body {
+    margin-top: 1.5rem;
+    border-bottom: 2px solid;
+    padding: 1rem;
+}
+
+.border-primary .hexagon {
+    background: #007bff;
+}
+
+.border-primary .hexagon::before {
+    border-color: transparent #007bff transparent transparent;
+}
+
+.border-primary .hexagon::after {
+    border-color: transparent transparent transparent #007bff;
+}
+
+.border-danger .hexagon {
+    background: #dc3545;
+}
+
+.border-danger .hexagon::before {
+    border-color: transparent #dc3545 transparent transparent;
+}
+
+.border-danger .hexagon::after {
+    border-color: transparent transparent transparent #dc3545;
+}
+
+.border-success .hexagon {
+    background: #28a745;
+}
+
+.border-success .hexagon::before {
+    border-color: transparent #28a745 transparent transparent;
+}
+
+.border-success .hexagon::after {
+    border-color: transparent transparent transparent #28a745;
+}
+
+.border-secondary .hexagon {
+    background: #6c757d;
+}
+
+.border-secondary .hexagon::before {
+    border-color: transparent #6c757d transparent transparent;
+}
+
+.border-secondary .hexagon::after {
+    border-color: transparent transparent transparent #6c757d;
+}
+
+.border-dark .hexagon {
+    background: #343a40;
+}
+
+.border-dark .hexagon::before {
+    border-color: transparent #343a40 transparent transparent;
+}
+
+.border-dark .hexagon::after {
+    border-color: transparent transparent transparent #343a40;
+}
+
+.border-info .hexagon {
+    background: #17a2b8;
+}
+
+.border-info .hexagon::before {
+    border-color: transparent #17a2b8 transparent transparent;
+}
+
+.border-info .hexagon::after {
+    border-color: transparent transparent transparent #17a2b8;
+}
+
+
+/* section 3 */
+
+.edu_card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    position: relative;
+    background: #FFF;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    min-height: 10rem;
+}
+
+.edu_card::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5rem 0 5rem 4rem;
+}
+
+.speed::before {
+    border-color: transparent transparent transparent #dc3545;
+}
+
+.hkcc::before {
+    border-color: transparent transparent transparent #17a2b8;
+}
+
+#edu .edu_card img {
+    position: absolute;
+    max-height: 10rem;
+}
+
+#edu .card-body {
+    margin-left: 10rem;
+}
+
+#edu .card-body span {
+    display: list-item;
+}
+
+
+/* section 4 */
+
+#exp .job_title {
+    height: 100%;
+    line-height: 40px;
+    position: relative;
+}
+
+#exp .job_title svg {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.option label {
+    width: 90%;
+    margin-right: 10%;
+    margin-top: 5%;
+    background-color: #F2F3F7;
+    height: 40px;
+    border-radius: 0 25px 25px 0;
+    padding-left: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+#exp .job_info {
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem;
+    width: 100%;
+    background: #FFF;
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+}
+
+#exp input[type="checkbox"]:checked~.job_title,
+#exp input[type="checkbox"]:checked~.job_title svg {
+    color: white;
+}
+
+#exp input[type="checkbox"]:checked~.job_info {
+    visibility: visible;
+    opacity: 1;
+    overflow-y: inherit;
+    max-height: 30rem;
+    /* display: block; */
+    height: unset;
+}
+
+.info_broad {
+    margin-bottom: 3rem;
+}
+
+#portfolio {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+#portfolio a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer {
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    background-color: #F8F8F8;
+    border-top: 1px solid #E7E7E7;
+    line-height: 2em;
+}
+
 @media (min-width:768px) {
-    div.card,
-    div.back div.back-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .nav_bar_image:hover {
+        animation: rotate_icon 1s linear;
     }
-    .card {
-        width: 600px;
-        height: 400px;
-        background: unset;
-        border: unset;
+}
+
+@media (max-width:768px) {
+    #sidebar.active {
+        margin-left: -60%;
     }
-    .front,
-    .back {
-        display: block;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        backface-visibility: hidden;
-        position: absolute;
-        transition: transform .6s linear;
-        border-radius: 15px;
-        overflow: hidden;
-    }
-    .front img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-    }
-    .front .dim {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5)
-    }
-    .front .dim p {
-        position: absolute;
-        top: 70%;
-        left: 60%;
-        color: #fff;
-        font-size: 1.5em;
-        text-shadow: 2px 2px #000;
-    }
-    .front {
-        transform: perspective(600px) rotateY(0deg);
-        background: #353b48;
-        animation: front_rotate 2s linear;
-    }
-    .back {
-        background: #f1f1f1;
-        transform: perspective(600px) rotateY(180deg);
-        animation: back_rotate 2s linear;
-    }
-    .back-content {
-        color: #2c3e50;
-        text-align: center;
-        width: 100%;
-    }
-    .card:hover>.front {
-        transform: perspective(600px) rotateY(-180deg);
-    }
-    .card:hover>.back {
-        transform: perspective(600px) rotateY(0deg);
-    }
-    .top_bar {
-        height: 30%;
-    }
-    footer {
+    #sidebarCollapse {
         position: fixed;
-        bottom: 0;
+        display: block;
+        top: 1vw;
+        left: 1vw;
+        /* margin-left: 45%; */
+    }
+    #sidebar.active~#sidebarCollapse {
+        margin-left: 0px;
+    }
+    #edu .edu_card img {
+        max-height: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #edu .card-body {
+        margin-top: 10rem;
+        margin-left: 1rem;
     }
 }
 
-@media (max-width:767px) {
-    .card {
-        border: unset;
-    }
-    .back-content {
-        height: 60vh;
-    }
-    .icon_card {
-        transform: translate(0%, -50%)
-    }
-    footer {
-        position: absolute;
-        bottom: 0;
-    }
-}
-
-@keyframes front_rotate {
-    0% {
-        transform: perspective(600px) rotateY(0deg);
-    }
-    100% {
+@keyframes rotate_icon {
+    to {
         transform: perspective(600px) rotateY(-360deg);
     }
 }
 
-@keyframes back_rotate {
-    0% {
-        transform: perspective(600px) rotateY(180deg);
+@keyframes fade_in_option {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
     }
-    100% {
-        transform: perspective(600px) rotateY(-180deg);
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
     }
 }
