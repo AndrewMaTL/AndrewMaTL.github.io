@@ -526,7 +526,7 @@ footer {
 
 @media (max-width:768px) {
     html {
-        font-size: 2vw;
+        font-size: 4vw;
     }
     #sidebar.active {
         margin-left: -60%;
@@ -543,6 +543,10 @@ footer {
     }
     #sidebar.active~#sidebarCollapse {
         margin-left: 0px;
+    }
+    .social_icon {
+        height: 100%;
+        max-height: 20px;
     }
     #edu .edu_card img {
         max-height: 10rem;
