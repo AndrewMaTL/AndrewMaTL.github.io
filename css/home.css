@@ -565,6 +565,9 @@ footer {
         height: 100%;
         max-height: 20px;
     }
+    .tab button {
+        float: right;
+    }
     #Who h2 {
         top: 30%;
         left: 15%;
