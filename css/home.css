@@ -554,6 +554,13 @@ footer {
     #sidebar.active~#sidebarCollapse {
         margin-left: 0px;
     }
+    .nav_bar li {
+        font-size: 1.5em;
+    }
+    .nav_bar_image {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
     .social_icon {
         height: 100%;
         max-height: 20px;
@@ -565,7 +572,7 @@ footer {
     #Who p {
         top: 45%;
         left: 40%;
-        font-size: 1.25em;
+        font-size: 3.5em;
     }
     div.tabcontent a {
         top: 60%;
@@ -578,7 +585,7 @@ footer {
     #What p {
         top: 45%;
         left: 25%;
-        font-size: 1.25em;
+        font-size: 3.5em;
     }
     #More h2 {
         width: 91%;
