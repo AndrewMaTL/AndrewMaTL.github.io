@@ -182,7 +182,7 @@ div.tabcontent a {
 
 #What {
     background: url('/image/section1/BG_3.jpeg');
-    background-size: auto 100%;
+    background-size: 100% auto;
 }
 
 .dim {
@@ -193,7 +193,7 @@ div.tabcontent a {
 
 #More {
     background: url('/image/section1/BG_2.jpeg');
-    background-size: auto 100%;
+    background-size: 100% auto;
 }
 
 #More h2 {
@@ -589,6 +589,14 @@ footer {
         top: 45%;
         left: 25%;
         font-size: 3.5em;
+    }
+    #What {
+        background: url('/image/section1/BG_3.jpeg');
+        background-size: auto 100%;
+    }
+    #More {
+        background: url('/image/section1/BG_2.jpeg');
+        background-size: auto 100%;
     }
     #More h2 {
         width: 91%;
