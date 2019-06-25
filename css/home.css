@@ -525,6 +525,9 @@ footer {
 }
 
 @media (max-width:768px) {
+    html {
+        font-size: 2vw;
+    }
     #sidebar.active {
         margin-left: -60%;
     }
@@ -533,7 +536,10 @@ footer {
         display: block;
         top: 1vw;
         left: 1vw;
-        /* margin-left: 45%; */
+    }
+    #sidebarCollapse svg {
+        width: 2.5rem;
+        height: 2.5rem;
     }
     #sidebar.active~#sidebarCollapse {
         margin-left: 0px;
