@@ -592,11 +592,13 @@ footer {
     }
     #What {
         background: url('/image/section1/BG_3.jpeg');
-        background-size: auto 100%;
+        background-size: cover;
+        background-position: center center;
     }
     #More {
         background: url('/image/section1/BG_2.jpeg');
-        background-size: auto 100%;
+        background-size: cover;
+        background-position: center center;
     }
     #More h2 {
         width: 91%;
