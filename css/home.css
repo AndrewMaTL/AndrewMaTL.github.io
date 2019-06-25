@@ -535,9 +535,6 @@ footer {
     #sidebar {
         font-size: 2vw;
     }
-    #sidebar span {
-        font-size: 1.5em;
-    }
     #sidebar.active {
         margin-left: -60%;
     }
