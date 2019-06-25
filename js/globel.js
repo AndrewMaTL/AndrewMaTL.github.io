@@ -20,7 +20,7 @@ $(document).ready(function() {
         siderbar();
     });
     $("li.nav-item").click(function() {
-        if ($("body").width() < 768) {
+        if ($("body").width() <= 768) {
             siderbar();
         }
     });
