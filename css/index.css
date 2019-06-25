@@ -23,6 +23,8 @@ body {
     font-size: 4rem;
     position: absolute;
     top: 30%;
+    min-width: 50vw;
+    text-align: center;
     animation: fadein_content 1s linear;
 }
 
