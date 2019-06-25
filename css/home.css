@@ -131,6 +131,10 @@ section {
 
 /* Style the tab content */
 
+#home {
+    font-size: 1vw;
+}
+
 .tabcontent {
     display: none;
     min-height: 40vh;
@@ -178,7 +182,7 @@ div.tabcontent a {
 
 #What {
     background: url('/image/section1/BG_2.jpeg');
-    background-size: 100% auto;
+    background-size: auto 100%;
 }
 
 .dim {
@@ -189,7 +193,7 @@ div.tabcontent a {
 
 #More {
     background: url('/image/section1/BG_3.jpeg');
-    background-size: 100% auto;
+    background-size: auto 100%;
 }
 
 #More h2 {
@@ -528,6 +532,9 @@ footer {
     html {
         font-size: 4vw;
     }
+    #sidebar {
+        font-size: 2vw;
+    }
     #sidebar.active {
         margin-left: -60%;
     }
@@ -547,6 +554,32 @@ footer {
     .social_icon {
         height: 100%;
         max-height: 20px;
+    }
+    #Who h2 {
+        top: 30%;
+        left: 15%;
+    }
+    #Who p {
+        top: 45%;
+        left: 40%;
+        font-size: 1.25em;
+    }
+    div.tabcontent a {
+        top: 60%;
+        left: 60%;
+    }
+    #What h2 {
+        top: 30%;
+        left: 10%;
+    }
+    #What p {
+        top: 45%;
+        left: 25%;
+        font-size: 1.25em;
+    }
+    #More h2 {
+        width: 91%;
+        top: 40%;
     }
     #edu .edu_card img {
         max-height: 10rem;
