@@ -20,7 +20,7 @@ body {
 }
 
 .welcome {
-    font-size: 72px;
+    font-size: 4rem;
     position: absolute;
     top: 30%;
     animation: fadein_content 1s linear;
@@ -46,6 +46,12 @@ body {
 
 a:hover {
     color: #fff;
+}
+
+@media (max-width:768px) {
+    body {
+        background: linear-gradient(318deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
 }
 
 @keyframes fadein_content {
