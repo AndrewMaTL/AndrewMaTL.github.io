@@ -535,6 +535,9 @@ footer {
     #sidebar {
         font-size: 2vw;
     }
+    #sidebar span {
+        font-size: 1.5em;
+    }
     #sidebar.active {
         margin-left: -60%;
     }
@@ -543,6 +546,9 @@ footer {
         display: block;
         top: 1vw;
         left: 1vw;
+        background: rgba(0, 0, 0, 0.2);
+        border: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px rgba(0, 0, 0, 0.2);
     }
     #sidebarCollapse svg {
         width: 2.5rem;
