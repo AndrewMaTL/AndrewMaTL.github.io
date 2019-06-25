@@ -504,6 +504,11 @@ div.tabcontent a {
     transform: translateX(-50%);
 }
 
+.portfolio_title {
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 1rem;
+}
+
 footer {
     height: 3rem;
     width: 100%;
