@@ -63,17 +63,30 @@ $(document).ready(function() {
         $("#" + cityName + "").css("display", "block");
         $(this).addClass("active");
     }
+    // call function 
     $(".tablinks").mouseover(function() {
         openCity($(this).html());
     });
     openCity($("#defaultOpen").html());
+    var tab_timer = 0;
+    var tab_names = ['Who', 'What', 'More'];
+    setInterval(function() {
+        openCity(tab_names[tab_timer]);
+        if (tab_timer < 2) {
+            tab_timer++;
+        } else {
+            tab_timer = 0;
+        }
+    }, 5000);
 
+    //job exp hidden info
     $("label").change(function() {
         $(this).toggleClass('bg-info');
         $('.job_title svg').toggleClass('fa-window-minimize');
         $('.job_title svg').toggleClass('fa-plus');
     });
 
+    // updated footer 
     dt = new Date;
     $("footer").text("© Copyright " + dt.getFullYear() + " Andrew Ma");
 });
