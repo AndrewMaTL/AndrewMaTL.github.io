@@ -507,7 +507,7 @@ div.tabcontent a {
     margin-bottom: 6rem;
 }
 
-#portfolio a {
+#portfolio a.my-3 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
