@@ -84,6 +84,7 @@ body {
 .content {
     float: right;
     padding: 15px;
+    width: 75%;;
 }
 
 section {

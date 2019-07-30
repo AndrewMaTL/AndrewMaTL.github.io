@@ -1,4 +1,22 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    // content
+    function SiderContentWidth() {
+        if ($("body").width() > 768) {
+            var body_width = $(".wrapper").width();
+            var wrap_width = $("ul.nav").outerWidth();
+            $('.content').outerWidth(body_width - wrap_width);
+        } else {
+            $('.content').outerWidth($("body").width());
+        }
+    }
+
+    SiderContentWidth();
+
+    $(window).resize(function () {
+        SiderContentWidth();
+    });
+
     // nav_bar fade in function
     for (var n = 2; n <= 8; n++) {
         $(".nav_bar li:nth-child(" + n + ")").css(
@@ -16,29 +34,13 @@ $(document).ready(function() {
             $('#sidebarCollapse').css({ 'margin-left': $("ul.nav").outerWidth() });
         }
     }
-    $('#sidebarCollapse').click(function() {
+    $('#sidebarCollapse').click(function () {
         siderbar();
     });
-    $("li.nav-item").click(function() {
+    $("li.nav-item").click(function () {
         if ($("body").width() <= 768) {
             siderbar();
         }
-    });
-    // content
-    function SiderContentWidth() {
-        if ($("body").width() > 768) {
-            var body_width = $(".wrapper").width();
-            var wrap_width = $("ul.nav").outerWidth();
-            $('.content').outerWidth(body_width - wrap_width);
-        } else {
-            $('.content').outerWidth($("body").width());
-        }
-    }
-
-    SiderContentWidth();
-
-    $(window).resize(function() {
-        SiderContentWidth();
     });
 
     // section 1
@@ -64,13 +66,13 @@ $(document).ready(function() {
         $(this).addClass("active");
     }
     // call function 
-    $(".tablinks").mouseover(function() {
+    $(".tablinks").mouseover(function () {
         openCity($(this).html());
     });
     openCity($("#defaultOpen").html());
     var tab_timer = 0;
     var tab_names = ['Who', 'What', 'More'];
-    setInterval(function() {
+    setInterval(function () {
         openCity(tab_names[tab_timer]);
         if (tab_timer < 2) {
             tab_timer++;
@@ -80,7 +82,7 @@ $(document).ready(function() {
     }, 5000);
 
     //job exp hidden info
-    $("label").change(function() {
+    $("label").change(function () {
         $(this).toggleClass('bg-info');
         $('.job_title svg').toggleClass('fa-window-minimize');
         $('.job_title svg').toggleClass('fa-plus');
